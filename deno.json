@@ -1,0 +1,19 @@
+{
+  "name": "foolNumber",
+  "version": "0.1.0",
+  "exports": "./mod.ts",
+  "exclude": ["./__test__","./frontend"],
+  "tasks": {
+    "test": "deno test --watch ./__test__/*"
+  },
+  "license": "MIT",
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  },
+  "workspace":["./frontend"],
+  "compilerOptions": {
+    "lib": ["deno.window","dom"],
+      "jsx": "precompile",
+      "jsxImportSource": "hono/jsx"
+  }
+}
